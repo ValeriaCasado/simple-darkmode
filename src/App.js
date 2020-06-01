@@ -23,26 +23,20 @@ export default class App extends React.Component {
 
 render() {
     let mode = null;
-    let lights = null;
     if (this.state.darkmode){
       mode = 'darkmode';
-      lights = 'Lights off!';
     } else {
       mode = 'lightmode';
-      lights = 'Lights on!';
     }
+
   return (
     <div className={mode} >       
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
         <label className="switch">
         <input type="checkbox" onClick={this.changemode}></input>
         <span className="slider round" ></span>
         </label>
-        <p>{lights}</p>
       </header>
     </div>
   );
